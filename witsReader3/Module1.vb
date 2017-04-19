@@ -5,11 +5,13 @@ Imports MongoDB.Bson
 
 Module Module1
     Dim request As String = "&&" & vbCr & vbLf & "0001-9999" & vbCr & vbLf & "!!" & vbCr & vbLf
-    Dim WitsSettings As WitsConfig
+    Dim WitsSettings As WitsConnectionSettings
     Dim AlternateRequest As Boolean = False
     Dim MongoC As MongoClient
-    Dim MongoD As IMongoDatabase
-    Dim RawInstants As IMongoCollection(Of RawInstant)
+    Dim MongoRawDB As IMongoDatabase
+    Dim MongoSettingsDB As IMongoDatabase
+    Dim RawInstantsCollection As IMongoCollection(Of RawInstant)
+    Dim WitsConnectionSettingsCollection As IMongoCollection(Of WitsConnectionSettings)
     Sub Main()
         '****Main should only be run on first program launch
         StartOver()
@@ -20,8 +22,14 @@ Module Module1
         Console.WriteLine("StartOver " & Date.Now())
         '*****StartOver should be called any time an error is thrown or the system has not recorded data in a set time interval
         MongoC = New MongoClient() 'Establish Mongo Client
-        MongoD = MongoC.GetDatabase("Raw") ' Establish Mongo Database
-        RawInstants = MongoD.GetCollection(Of RawInstant)("RawInstants") ' Establish Mongo Collection
+        MongoRawDB = MongoC.GetDatabase("Raw") ' Establish Mongo Raw Database
+        MongoSettingsDB = MongoC.GetDatabase("Settings") ' Establish Mongo Settings Database
+
+        Dim thisInstant = Date.UtcNow()
+        RawInstantsCollection = MongoRawDB.GetCollection(Of RawInstant)("RawInstants_" & thisInstant.Month() & "_" & thisInstant.Year()) ' Establish Mongo Collection this naming convention is RawInstants_Mo_Year
+        WitsConnectionSettingsCollection = MongoSettingsDB.GetCollection(Of WitsConnectionSettings
+            )("WitsConnection") ' Establish Mongo Wits Connection Collection 
+
         SerialPort1 = New Ports.SerialPort 'Create Serial Port Adapter
         requestTimer = New Timers.Timer 'Create request timer - used if WitsSettings in Request mode
 
@@ -58,7 +66,14 @@ Module Module1
     End Sub
     Sub RetrieveSettings() 'Retrieves the JSON settings file in C:\WitsReader\WitsConfig.json
         Dim stringFromWitsFile = File.ReadAllText("C:\WitsReader\WitsConfig.json")
-        WitsSettings = JsonConvert.DeserializeObject(Of WitsConfig)(stringFromWitsFile)
+        WitsSettings = JsonConvert.DeserializeObject(Of WitsConnectionSettings)(stringFromWitsFile)
+        For i = 1 To 5
+            WitsConnectionSettingsCollection.InsertOne(WitsSettings)
+        Next
+        Dim f As FilterDefinition(Of WitsConnectionSettings)
+
+        Dim hh = WitsConnectionSettingsCollection.Find(f.Equals(New WitsConnectionSettings() With {.Baudrate = 9600}))
+
     End Sub
 
 
@@ -106,7 +121,7 @@ Module Module1
                     End If
                 End If
             Next
-            If newRawInstant.data.Count > 0 Then RawInstants.InsertOne(newRawInstant)
+            If newRawInstant.data.Count > 0 Then RawInstantsCollection.InsertOne(newRawInstant)
             receivedTimer.Start()
         Catch ex As Exception
             Console.WriteLine(ex.Message)

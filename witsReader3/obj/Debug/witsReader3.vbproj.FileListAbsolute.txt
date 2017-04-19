@@ -1,0 +1,31 @@
+c:\users\roil desktop\documents\visual studio 2015\Projects\witsReader3\witsReader3\bin\Debug\witsReader3.exe.config
+c:\users\roil desktop\documents\visual studio 2015\Projects\witsReader3\witsReader3\bin\Debug\witsReader3.exe
+c:\users\roil desktop\documents\visual studio 2015\Projects\witsReader3\witsReader3\bin\Debug\witsReader3.pdb
+c:\users\roil desktop\documents\visual studio 2015\Projects\witsReader3\witsReader3\bin\Debug\witsReader3.xml
+c:\users\roil desktop\documents\visual studio 2015\Projects\witsReader3\witsReader3\obj\Debug\witsReader3.Resources.resources
+c:\users\roil desktop\documents\visual studio 2015\Projects\witsReader3\witsReader3\obj\Debug\witsReader3.vbproj.GenerateResource.Cache
+c:\users\roil desktop\documents\visual studio 2015\Projects\witsReader3\witsReader3\obj\Debug\witsReader3.exe
+c:\users\roil desktop\documents\visual studio 2015\Projects\witsReader3\witsReader3\obj\Debug\witsReader3.xml
+c:\users\roil desktop\documents\visual studio 2015\Projects\witsReader3\witsReader3\obj\Debug\witsReader3.pdb
+c:\users\roil desktop\documents\visual studio 2015\Projects\witsReader3\witsReader3\bin\Debug\Newtonsoft.Json.dll
+c:\users\roil desktop\documents\visual studio 2015\Projects\witsReader3\witsReader3\bin\Debug\Newtonsoft.Json.xml
+c:\users\roil desktop\documents\visual studio 2015\Projects\witsReader3\witsReader3\obj\Debug\witsReader3.vbprojResolveAssemblyReference.cache
+C:\Users\Kingdel\Desktop\witsReader3\witsReader3\bin\Debug\witsReader3.exe.config
+C:\Users\Kingdel\Desktop\witsReader3\witsReader3\obj\Debug\witsReader3.exe
+C:\Users\Kingdel\Desktop\witsReader3\witsReader3\obj\Debug\witsReader3.xml
+C:\Users\Kingdel\Desktop\witsReader3\witsReader3\obj\Debug\witsReader3.pdb
+C:\Users\Kingdel\Desktop\witsReader3\witsReader3\bin\Debug\witsReader3.exe
+C:\Users\Kingdel\Desktop\witsReader3\witsReader3\bin\Debug\witsReader3.pdb
+C:\Users\Kingdel\Desktop\witsReader3\witsReader3\bin\Debug\witsReader3.xml
+C:\Users\Kingdel\Desktop\witsReader3\witsReader3\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Kingdel\Desktop\witsReader3\witsReader3\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Kingdel\Desktop\witsReader3\witsReader3\obj\Debug\witsReader3.vbprojResolveAssemblyReference.cache
+C:\Users\Kingdel\Desktop\witsReader3\witsReader3\obj\Debug\witsReader3.Resources.resources
+C:\Users\Kingdel\Desktop\witsReader3\witsReader3\obj\Debug\witsReader3.vbproj.GenerateResource.Cache
+C:\Users\Kingdel\Desktop\witsReader3\witsReader3\bin\Debug\MongoDB.Bson.dll
+C:\Users\Kingdel\Desktop\witsReader3\witsReader3\bin\Debug\MongoDB.Driver.Core.dll
+C:\Users\Kingdel\Desktop\witsReader3\witsReader3\bin\Debug\MongoDB.Driver.dll
+C:\Users\Kingdel\Desktop\witsReader3\witsReader3\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Kingdel\Desktop\witsReader3\witsReader3\bin\Debug\MongoDB.Bson.xml
+C:\Users\Kingdel\Desktop\witsReader3\witsReader3\bin\Debug\MongoDB.Driver.xml
+C:\Users\Kingdel\Desktop\witsReader3\witsReader3\bin\Debug\MongoDB.Driver.Core.xml

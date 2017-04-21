@@ -5,10 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "witsReader3", "witsReader3\witsReader3.vbproj", "{CF12E8D3-F1D4-416C-88D5-8518D781753A}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "restartApplications", "restartApplications\restartApplications.vbproj", "{CF376174-3899-44A8-B63D-933554857B94}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsharpWitsMongo", "CsharpWitsMongo\CsharpWitsMongo.csproj", "{F3EFE0D6-1C41-40EB-887E-A01857C1F7B8}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,14 +15,6 @@ Global
 		{CF12E8D3-F1D4-416C-88D5-8518D781753A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF12E8D3-F1D4-416C-88D5-8518D781753A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF12E8D3-F1D4-416C-88D5-8518D781753A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CF376174-3899-44A8-B63D-933554857B94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CF376174-3899-44A8-B63D-933554857B94}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CF376174-3899-44A8-B63D-933554857B94}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CF376174-3899-44A8-B63D-933554857B94}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F3EFE0D6-1C41-40EB-887E-A01857C1F7B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F3EFE0D6-1C41-40EB-887E-A01857C1F7B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F3EFE0D6-1C41-40EB-887E-A01857C1F7B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F3EFE0D6-1C41-40EB-887E-A01857C1F7B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

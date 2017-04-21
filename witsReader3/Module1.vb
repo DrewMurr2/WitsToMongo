@@ -7,11 +7,7 @@ Module Module1
     Dim request As String = "&&" & vbCr & vbLf & "0001-9999" & vbCr & vbLf & "!!" & vbCr & vbLf
     Dim WitsSettings As Settings.WitsConnectionSettings
     Dim AlternateRequest As Boolean = False
-    Dim MongoC As MongoClient
-    Dim MongoRawDB As IMongoDatabase
-    Dim MongoSettingsDB As IMongoDatabase
-    Dim RawInstantsCollection As IMongoCollection(Of RawInstant)
-    Dim WitsConnectionSettingsCollection As IMongoCollection(Of Settings.WitsConnectionSettings)
+
     Sub Main()
         '****Main should only be run on first program launch
         StartOver()
@@ -19,15 +15,7 @@ Module Module1
     End Sub
 
     Sub StartOver()
-        Console.WriteLine("StartOver " & Date.Now())
         ''*****StartOver should be called any time an error is thrown or the system has not recorded data in a set time interval
-        'MongoC = New MongoClient() 'Establish Mongo Client
-        'MongoRawDB = MongoC.GetDatabase("Raw") ' Establish Mongo Raw Database
-        'MongoSettingsDB = MongoC.GetDatabase("Settings") ' Establish Mongo Settings Database
-
-        'WitsConnectionSettingsCollection = MongoSettingsDB.GetCollection(Of WitsConnectionSettings
-        '    )("WitsConnection") ' Establish Mongo Wits Connection Collection 
-
         SerialPort1 = New Ports.SerialPort 'Create Serial Port Adapter
         requestTimer = New Timers.Timer 'Create request timer - used if WitsSettings in Request mode
 
